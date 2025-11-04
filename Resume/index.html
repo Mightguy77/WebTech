@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Firstname Lastname — Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="resume">
+    <header class="resume-header">
+      <div class="header-left">
+        <h1 class="name">Firstname Lastname</h1>
+        <p class="role">Senior Software Engineer</p>
+      </div>
+      <div class="header-right">
+        <p class="contact">
+          <a href="mailto:you@example.com">you@example.com</a> · (555) 555-5555
+        </p>
+        <p class="contact">
+          <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a>
+          · <a href="https://linkedin.com/in/username" target="_blank" rel="noopener">linkedin.com/in/username</a>
+        </p>
+        <p class="location">City, State · Remote</p>
+      </div>
+    </header>
+
+    <main class="resume-main">
+      <section class="summary" aria-labelledby="summary-heading">
+        <h2 id="summary-heading">Summary</h2>
+        <p>
+          Results-driven software engineer with 8+ years building scalable web applications.
+          Strong background in JavaScript, React, Node.js, and cloud infrastructure. Passionate
+          about mentoring, building accessible user experiences, and shipping high-quality products.
+        </p>
+      </section>
+
+      <section class="experience" aria-labelledby="experience-heading">
+        <h2 id="experience-heading">Experience</h2>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3 class="job-title">Senior Frontend Engineer</h3>
+            <p class="job-meta">Amazing Co — <span class="job-dates">2021 — Present</span></p>
+          </div>
+          <ul class="job-bullets">
+            <li>Led a team of 4 engineers to rebuild the customer dashboard using React + TypeScript; improved load time by 40%.</li>
+            <li>Designed component library (Storybook) and improved design-system adoption across 3 products.</li>
+            <li>Introduced code-splitting and performance budgets; reduced bundle size by 30%.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-heading">
+            <h3 class="job-title">Software Engineer</h3>
+            <p class="job-meta">Startup XYZ — <span class="job-dates">2017 — 2021</span></p>
+          </div>
+          <ul class="job-bullets">
+            <li>Built REST APIs in Node.js and migrated monolith to microservices on AWS.</li>
+            <li>Implemented CI/CD pipelines (GitHub Actions) reducing deployment time from hours to minutes.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="projects" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Selected Projects</h2>
+        <ul class="project-list">
+          <li>
+            <strong>OpenSource-Widget</strong> — A small, accessible UI widget library used by 10k+ websites.
+          </li>
+          <li>
+            <strong>Metrics Dashboard</strong> — Realtime dashboard with charts and alerts (WebSockets, D3).
+          </li>
+        </ul>
+      </section>
+
+      <section class="education" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <p>
+          B.S. in Computer Science — University Name, 2013 — 2017
+        </p>
+      </section>
+    </main>
+
+    <aside class="resume-sidebar">
+      <section class="skills" aria-labelledby="skills-heading">
+        <h3 id="skills-heading">Skills</h3>
+        <ul class="skill-list">
+          <li>JavaScript / TypeScript</li>
+          <li>React / Next.js</li>
+          <li>Node.js / Express</li>
+          <li>HTML5 & CSS3 (Flexbox, Grid)</li>
+          <li>AWS (Lambda, S3, CloudFormation)</li>
+          <li>Testing (Jest, Cypress)</li>
+        </ul>
+      </section>
+
+      <section class="certs" aria-labelledby="certs-heading">
+        <h3 id="certs-heading">Certifications</h3>
+        <ul>
+          <li>AWS Certified Developer — Associate</li>
+          <li>Scrum Master (CSM)</li>
+        </ul>
+      </section>
+
+      <section class="extras" aria-labelledby="extras-heading">
+        <h3 id="extras-heading">Languages</h3>
+        <p>English (native), Spanish (conversational)</p>
+      </section>
+    </aside>
+
+    <footer class="resume-footer">
+      <p>Last updated: <time datetime="2025-10-26">2025-10-26</time></p>
+    </footer>
+  </div>
+
+</body>
+</html>

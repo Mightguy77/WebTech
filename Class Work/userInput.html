@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        User Input
+    </title>
+</head>
+
+<body>
+    <form action="" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Patiesnt information</legend>
+
+            <label for="userName">Patient name: </label>
+            <input type="text" id="userName" name="userName" placeholder="User Name"><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="Input your name" required><br>
+
+            <label for="Gender">Gender: </label>
+            <input type="radio" id="maleRb" name="gender" value="male">male
+            <input type="radio" id="femaleRb" name="gender" value="male">female <br>
+
+            <label for="bloodGroup">blood Group: </label>
+            <select id="bloodGroup" name="bloodGroup">
+                <option id="op1" value="">Select an Option</option>
+                <option id="A+" value="A+">A+</option>
+                <option id="A-" value="A-">A-</option>
+                <option id="AB+" value="AB+">AB+</option>
+                <option id="AB-" value="AB-">AB-</option>
+                <option id="O-" value="O-">O-</option>
+                <option id="O+" value="O+">O+</option>
+            </select><br>
+
+            <label for="maritalStatus[]">maritalStatus: </label>
+            <input type="checkbox" id="Married" name="maritalStatus[]" value="Married">Married
+            <input type="checkbox" id="Unmaried" name="maritalStatus[]" value="Unmaried">Unmarried<br>
+
+
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Contact information</legend>
+
+            <label for="Email">Email: </label>
+            <input type="text" id="Email" name="Email" placeholder="Email"><br>
+            <label for="Phone">Phone Number:</label>
+            <input type="text" id="Phone" name="Phone" placeholder="Phone number" required><br>
+            <label for="Address">Address :</label>
+            <input type="text" id="Address" name="Address" placeholder="Address" required><br>
+
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Emergency Contact information</legend>
+            <label for="userName">Full Name: </label>
+            <input type="text" id="userName" name="userName" placeholder="Full name"><br>
+            <label for="Relationship">Relationship: </label>
+            <input type="text" id="Relationship" name="Relationship" placeholder="Spouse, Parent, Friend.."><br>
+            <label for="Phone">Phone Number:</label>
+            <input type="text" id="Phone" name="Phone" placeholder="Phone number" required><br>
+
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Emergency Contact information</legend>
+            <label for="Department">Department: </label>
+            <select id="Department" name="Department">
+                <option id="op1" value="op1">Select Department</option>
+                <option id="op2" value="op2">General Medicine</option>
+                <option id="op3" value="op3">Pediatrics</option>
+                <option id="op4" value="op4">Cardiology</option>
+                <option id="op5" value="op5">Orthopedics</option>
+                <option id="op6" value="op6">Detmatology</option>
+
+            </select><br>
+            <label for="Physician">Physician Name: </label>
+            <input type="text" id="Physician" name="Physician" placeholder="Dr. Nazim"><br>
+            <label for="apptDate">Preferred Date</label>
+            <input id="apptDate" name="apptDate" type="date" /> <br>
+            <label for="reason">Reason for Visit</label><br>
+            <textarea id="reason" name="reason" rows="3"
+                placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+
+        </fieldset><br><br>
+
+        <fieldset>
+            <legend>Medical History</legend>
+
+            <input type="checkbox" name="history" value="Diabetes">Diabete</label>
+            <input type="checkbox" name="history" value="Hypertension">Hypertensio</label>
+            <input type="checkbox" name="history" value="Heart Disease">HeartDiseas</label>
+            <input type="checkbox" name="history" value="Asthma">Asthm</label>
+            <input type="checkbox" name="history" value="Allergies">Allergie</label>
+            <input type="checkbox" name="history" value="Stroke">Strok</label>
+            <input type="checkbox" name="history" value="Cancer">Cancer</label>
+            <input type="checkbox" name="history" value="Other">Other</label><br>
+
+            <label for="current">Current Medications</label><br>
+            <textarea id="current" name="current" rows="3" placeholder="List any current medications"></textarea><br>
+
+            <label for="Allergies">Current Medications</label><br>
+            <textarea id="Allergies" name="Allergies" rows="3"
+                placeholder="Food, drug, environmental, ect..."></textarea>
+        </fieldset><br><br>
+
+
+        <fieldset>
+            <legend>Consent & Signature</legend>
+            <input type="checkbox" name="confirm" value="confirm">I confirm that the information provided is accurate
+            and I consent to treatment and data processing</label><br>
+            <br>
+
+            <label for="sign">Signature</label><br>
+            <textarea id="sign" name="sign" rows="3"
+                placeholder="Signature..."></textarea>
+        </fieldset><br><br>
+
+       
+
+        <button type="reset" class="btn btn-ghost">Clear</button>
+        <button type="submit" class="btn">Submit</button> <br><br>
+
+
+
+    </form>
+</body>
+
+</html>

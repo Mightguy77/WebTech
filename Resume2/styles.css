@@ -1,0 +1,183 @@
+:root{
+  --tan-1: #d6b79a;
+  --tan-2: #bfa185;
+  --cream: #f7efe8;
+  --text-dark: #2b2b2b;
+  --muted: #6b6b6b;
+  --accent: #9ea8ff;
+  --max-width: 900px;
+  --gap: 20px;
+  --page-pad: 28px;
+  font-family: "Helvetica Neue", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin: 0;
+  background: linear-gradient(180deg,#efe9e4 0%, #f8f7f6 100%);
+  display: flex;
+  justify-content: center;    /* keep resume centered horizontally */
+  align-items: flex-start;    /* align to top so page can scroll */
+  min-height: 100vh;          /* at least the viewport height */
+  overflow: auto;             /* allow vertical scrolling */
+  padding: 32px;
+  color: var(--text-dark);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height: 1.45;
+}
+
+/* optional: keep resume from growing past viewport if you prefer internal scroll */
+.resume {
+  width: 100%;
+  max-width: var(--max-width);
+  background: white;
+  border-radius: 10px;
+  overflow: visible; /* or 'auto' if you want the resume itself to scroll */
+  box-shadow: 0 12px 30px rgba(21,21,21,0.12);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Top band */
+.top-band{
+  background: linear-gradient(90deg, var(--tan-1), var(--tan-2));
+  padding:18px 22px;
+  color: white;
+}
+.top-content{
+  display:flex;
+  gap:18px;
+  align-items:center;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Profile photo circle */
+.profile-wrap{
+  width:112px;
+  height:112px;
+  flex:0 0 112px;
+  border-radius:999px;
+  background: rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6px;
+}
+.profile-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:999px;
+  border:4px solid rgba(255,255,255,0.18);
+}
+
+/* Header info */
+.header-info{flex:1}
+.fullname{
+  margin:0;
+  font-size:22px;
+  font-weight:700;
+  color:#fff;
+  letter-spacing:-0.4px;
+}
+.title{
+  margin:6px 0 0;
+  color: rgba(255,255,255,0.92);
+  font-weight:600;
+}
+.contact-line{
+  margin:8px 0 0;
+  color: rgba(255,255,255,0.9);
+  font-size:14px;
+}
+.top-band a{ color: rgba(255,255,255,0.95); text-decoration:underline }
+
+/* Main content split */
+.content{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:0;
+}
+
+/* Left column (white) */
+.left-column{
+  padding:22px 28px;
+  background: white;
+}
+.section{ margin-bottom:18px }
+.section h2{
+  margin:0 0 10px 0;
+  font-size:15px;
+  color:var(--text-dark);
+  border-left:4px solid var(--tan-2);
+  padding-left:10px;
+}
+.summary p{ margin:0; color:var(--muted) }
+.job{ margin-bottom:12px }
+.job-header{ display:flex; justify-content:space-between; gap:12px; align-items:center }
+.job-header h3{ margin:0; font-size:15px }
+.meta{ color:var(--muted); font-size:13px }
+.left-column ul{ margin:8px 0 0 18px; color:var(--muted) }
+
+/* Right column (tan panel) */
+.right-column{
+  background: linear-gradient(180deg, var(--cream), #efe8e0);
+  padding:22px;
+  border-left:1px solid rgba(0,0,0,0.04);
+}
+.panel{ margin-bottom:18px; background:transparent; padding:0; }
+.panel h3{
+  margin:0 0 12px 0;
+  font-size:14px;
+  color:var(--text-dark);
+  text-transform:uppercase;
+  letter-spacing:0.6px;
+}
+
+/* Skills bars */
+.skill{ margin-bottom:12px }
+.skill-name{ font-size:13px; color:var(--text-dark); margin-bottom:6px; }
+.skill-bar{
+  height:10px;
+  background: rgba(0,0,0,0.06);
+  border-radius:999px;
+  overflow:hidden;
+}
+.skill-bar span{
+  display:block;
+  height:100%;
+  background: linear-gradient(90deg, #f2a97a, #e379b8);
+  border-radius:999px;
+  box-shadow: inset 0 -2px 6px rgba(255,255,255,0.12);
+}
+
+/* Footer */
+.footer{
+  padding:12px 22px;
+  text-align:right;
+  color:var(--muted);
+  font-size:13px;
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 800px){
+  .content{ grid-template-columns: 1fr; }
+  .right-column{ order:2; border-left:none; border-top:1px solid rgba(0,0,0,0.04); }
+  .left-column{ order:1 }
+  .top-content{ padding-bottom:8px; gap:12px; }
+  .profile-wrap{ width:88px; height:88px; flex:0 0 88px; }
+  .fullname{ font-size:20px }
+}
+
+/* Print adjustments */
+@media print{
+  body{ background:white; padding:0; }
+  .top-band{ color:black; background: #d8c2aa; -webkit-print-color-adjust:exact; }
+  .right-column{ background: #f8f4f1; -webkit-print-color-adjust:exact; }
+  .skill-bar{ background: #e9e9e9 }
+  .skill-bar span{ background: #bdbdbd }
+  .profile-photo{ border:2px solid rgba(0,0,0,0.08) }
+}

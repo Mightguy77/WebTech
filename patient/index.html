@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hospital Patient Registration Form</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header card">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">+</div>
+        <div class="brand-text">
+          <h1>Hospital Patient Registration</h1>
+          <p>Please complete all required fields to help us provide the best care.</p>
+        </div>
+      </div>
+    </header>
+
+    <form class="form card" novalidate>
+      <!-- Patient Information -->
+      <section class="section">
+        <h2 class="section-title">Patient Information</h2>
+        <div class="grid grid-3">
+          <div class="field">
+            <label for="firstName">First Name<span class="req">*</span></label>
+            <input id="firstName" name="firstName" type="text" placeholder="John" />
+          </div>
+          <div class="field">
+            <label for="lastName">Last Name<span class="req">*</span></label>
+            <input id="lastName" name="lastName" type="text" placeholder="Doe" />
+          </div>
+          <div class="field">
+            <label for="dob">Date of Birth<span class="req">*</span></label>
+            <input id="dob" name="dob" type="date" />
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="" selected disabled>Select</option>
+              <option>Female</option>
+              <option>Male</option>
+              <option>Non-binary</option>
+              <option>Prefer not to say</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="maritalStatus">Marital Status</label>
+            <select id="maritalStatus" name="maritalStatus">
+              <option value="" selected disabled>Select</option>
+              <option>Single</option>
+              <option>Married</option>
+              <option>Divorced</option>
+              <option>Widowed</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" name="bloodGroup">
+              <option value="" selected disabled>Select</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Details -->
+      <section class="section">
+        <h2 class="section-title">Contact Details</h2>
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="email">Email<span class="req">*</span></label>
+            <input id="email" name="email" type="email" placeholder="john.doe@email.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number<span class="req">*</span></label>
+            <input id="phone" name="phone" type="tel" placeholder="+1 (555) 123-4567" />
+          </div>
+        </div>
+
+        <div class="grid grid-1">
+          <div class="field">
+            <label for="address">Street Address<span class="req">*</span></label>
+            <input id="address" name="address" type="text" placeholder="123 Main St, Apt 4B" />
+          </div>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="field">
+            <label for="city">City<span class="req">*</span></label>
+            <input id="city" name="city" type="text" placeholder="City" />
+          </div>
+          <div class="field">
+            <label for="state">State/Province<span class="req">*</span></label>
+            <input id="state" name="state" type="text" placeholder="State/Province" />
+          </div>
+          <div class="field">
+            <label for="zip">ZIP/Postal Code<span class="req">*</span></label>
+            <input id="zip" name="zip" type="text" placeholder="Postal Code" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Emergency Contact -->
+      <section class="section">
+        <h2 class="section-title">Emergency Contact</h2>
+        <div class="grid grid-3">
+          <div class="field">
+            <label for="emgName">Full Name<span class="req">*</span></label>
+            <input id="emgName" name="emgName" type="text" placeholder="Jane Doe" />
+          </div>
+          <div class="field">
+            <label for="emgRelation">Relationship<span class="req">*</span></label>
+            <input id="emgRelation" name="emgRelation" type="text" placeholder="Spouse, Parent, Friend..." />
+          </div>
+          <div class="field">
+            <label for="emgPhone">Phone Number<span class="req">*</span></label>
+            <input id="emgPhone" name="emgPhone" type="tel" placeholder="+1 (555) 765-4321" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Insurance Information -->
+      <section class="section">
+        <h2 class="section-title">Insurance Information</h2>
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="insProvider">Provider</label>
+            <input id="insProvider" name="insProvider" type="text" placeholder="Provider Name" />
+          </div>
+          <div class="field">
+            <label for="policyNumber">Policy Number</label>
+            <input id="policyNumber" name="policyNumber" type="text" placeholder="Policy #123456" />
+          </div>
+        </div>
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="groupNumber">Group Number</label>
+            <input id="groupNumber" name="groupNumber" type="text" placeholder="Group #ABC" />
+          </div>
+          <div class="field">
+            <label for="insPhone">Insurer Phone</label>
+            <input id="insPhone" name="insPhone" type="tel" placeholder="+1 (800) 000-0000" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Appointment Details -->
+      <section class="section">
+        <h2 class="section-title">Appointment Details</h2>
+        <div class="grid grid-3">
+          <div class="field">
+            <label for="dept">Department</label>
+            <select id="dept" name="dept">
+              <option value="" selected disabled>Select department</option>
+              <option>General Medicine</option>
+              <option>Pediatrics</option>
+              <option>Cardiology</option>
+              <option>Orthopedics</option>
+              <option>Dermatology</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="physician">Physician</label>
+            <input id="physician" name="physician" type="text" placeholder="Dr. Smith" />
+          </div>
+          <div class="field">
+            <label for="apptDate">Preferred Date</label>
+            <input id="apptDate" name="apptDate" type="date" />
+          </div>
+        </div>
+        <div class="grid grid-1">
+          <div class="field">
+            <label for="reason">Reason for Visit</label>
+            <textarea id="reason" name="reason" rows="3" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Medical History -->
+      <section class="section">
+        <h2 class="section-title">Medical History</h2>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="history" value="Diabetes" /><span>Diabetes</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Hypertension" /><span>Hypertension</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Heart Disease" /><span>Heart Disease</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Asthma" /><span>Asthma</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Allergies" /><span>Allergies</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Stroke" /><span>Stroke</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Cancer" /><span>Cancer</span></label>
+          <label class="chip"><input type="checkbox" name="history" value="Other" /><span>Other</span></label>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="currentMeds">Current Medications</label>
+            <textarea id="currentMeds" name="currentMeds" rows="3" placeholder="List any current medications"></textarea>
+          </div>
+          <div class="field">
+            <label for="allergies">Known Allergies</label>
+            <textarea id="allergies" name="allergies" rows="3" placeholder="Food, drug, environmental, etc."></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Consent -->
+      <section class="section">
+        <h2 class="section-title">Consent & Signature</h2>
+        <div class="consent">
+          <label class="checkbox">
+            <input type="checkbox" name="consent" />
+            <span>I confirm that the information provided is accurate and I consent to treatment and data processing.</span>
+          </label>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="field">
+            <label for="signature">Signature (placeholder)</label>
+            <div class="signature-pad" id="signature" aria-label="Signature area" tabindex="0">
+              <span>Sign here</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="signedDate">Date</label>
+            <input id="signedDate" name="signedDate" type="date" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button type="reset" class="btn btn-ghost">Clear</button>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+      <p class="footnote">This is a design-only demo. No data is submitted.</p>
+    </form>
+  </main>
+</body>
+</html>
