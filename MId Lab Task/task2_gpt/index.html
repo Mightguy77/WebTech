@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>University Admission Form</title>
+  <meta name="author" content="Mightguy77" />
+  <meta name="description" content="Online admission form for new students collecting personal details, academic background, preferred department and documents." />
+  <meta name="keywords" content="admission, university, form, application, student" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>University Admission Form</h1>
+      <p class="lead">Please complete all required fields marked with an asterisk (*)</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form id="admission-form" action="#" method="post" enctype="multipart/form-data">
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+
+        <label for="first-name">First name *</label>
+        <input type="text" id="first-name" name="firstName" maxlength="50" required placeholder="Given name" />
+
+        <label for="last-name">Last name *</label>
+        <input type="text" id="last-name" name="lastName" maxlength="50" required placeholder="Family name" />
+
+        <label for="dob">Date of birth *</label>
+        <input type="date" id="dob" name="dateOfBirth" required />
+
+        <label>Gender *</label>
+        <div class="radio-group" role="radiogroup" aria-labelledby="gender-label">
+          <input type="radio" id="gender-m" name="gender" value="male" required />
+          <label for="gender-m">Male</label>
+
+          <input type="radio" id="gender-f" name="gender" value="female" />
+          <label for="gender-f">Female</label>
+
+          <input type="radio" id="gender-o" name="gender" value="other" />
+          <label for="gender-o">Other</label>
+        </div>
+
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" maxlength="100" required placeholder="you@example.com" />
+
+        <label for="phone">Phone number *</label>
+        <input type="tel" id="phone" name="phone" maxlength="20" required placeholder="+1 555 555 5555"
+               pattern="\+?[0-9\s\-\(\)]{7,20}" title="Enter a valid phone number (digits, spaces, +, - allowed)" />
+
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" maxlength="250" placeholder="Street, city, state, postal code"></textarea>
+
+        <label for="nationality">Nationality</label>
+        <input type="text" id="nationality" name="nationality" maxlength="50" placeholder="Country" />
+      </fieldset>
+
+      <!-- Academic Information -->
+      <fieldset>
+        <legend>Academic Information</legend>
+
+        <label for="highest-degree">Highest completed qualification *</label>
+        <select id="highest-degree" name="highestDegree" required>
+          <option value="">-- Select qualification --</option>
+          <option value="highschool">High School Diploma</option>
+          <option value="diploma">Diploma</option>
+          <option value="bachelor">Bachelor's Degree</option>
+          <option value="master">Master's Degree</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="institution">Institution name *</label>
+        <input type="text" id="institution" name="institution" maxlength="100" required placeholder="Name of school / college / university" />
+
+        <label for="graduation-year">Year of graduation *</label>
+        <input type="number" id="graduation-year" name="graduationYear" min="1900" max="2100" required placeholder="e.g., 2024" />
+
+        <label for="gpa">Grade / GPA (if applicable)</label>
+        <input type="number" id="gpa" name="gpa" step="0.01" min="0" max="10" placeholder="e.g., 3.75" />
+      </fieldset>
+
+      <!-- Preferences -->
+      <fieldset>
+        <legend>Program Preferences & Interests</legend>
+
+        <label for="course">Course / Program applying for *</label>
+        <select id="course" name="course" required>
+          <option value="">-- Select a program --</option>
+          <option value="cs">B.Sc. Computer Science</option>
+          <option value="it">B.Sc. Information Technology</option>
+          <option value="eng">B.Eng. Software Engineering</option>
+          <option value="bus">BBA</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="department">Preferred Department</label>
+        <select id="department" name="department">
+          <option value="">-- Optional --</option>
+          <option value="computing">Computing & IT</option>
+          <option value="engineering">Engineering</option>
+          <option value="business">Business</option>
+          <option value="sciences">Sciences</option>
+        </select>
+
+        <fieldset class="inner-fieldset">
+          <legend>Interests (select all that apply)</legend>
+          <input type="checkbox" id="interest-research" name="interests" value="research" />
+          <label for="interest-research">Research</label>
+
+          <input type="checkbox" id="interest-sports" name="interests" value="sports" />
+          <label for="interest-sports">Sports & Clubs</label>
+
+          <input type="checkbox" id="interest-volunteer" name="interests" value="volunteer" />
+          <label for="interest-volunteer">Volunteer Work</label>
+
+          <input type="checkbox" id="interest-arts" name="interests" value="arts" />
+          <label for="interest-arts">Arts & Culture</label>
+        </fieldset>
+      </fieldset>
+
+      <!-- Documents -->
+      <fieldset>
+        <legend>Supporting Documents</legend>
+
+        <label for="transcript">Official transcript (PDF) *</label>
+        <input type="file" id="transcript" name="transcript" accept=".pdf,application/pdf" required />
+
+        <label for="resume">Resume / CV (PDF, DOCX)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf,application/pdf,.doc,.docx" />
+
+        <label for="photo">Passport photo (JPEG/PNG)</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+        <small class="muted">Max file size should be enforced server-side (recommended).</small>
+      </fieldset>
+
+      <!-- Declaration -->
+      <fieldset>
+        <legend>Declaration</legend>
+        <input type="checkbox" id="declaration" name="declaration" required />
+        <label for="declaration">I certify that the information provided is true and correct to the best of my knowledge. *</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Submit Application</button>
+        <button type="reset" class="secondary">Reset Form</button>
+      </div>
+
+      <p class="form-note">Note: This is a front-end demo. Configure a server endpoint to receive and process applications.</p>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> University Admissions — Demo</p>
+    </div>
+  </footer>
+
+  <script>
+    // set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

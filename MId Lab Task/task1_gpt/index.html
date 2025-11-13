@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mightguy77 — Personal Portfolio</title>
+  <meta name="author" content="Mightguy77" />
+  <meta name="description" content="Personal portfolio of Mightguy77 — Computer Science student showcasing education and contact form for internship opportunities." />
+  <meta name="keywords" content="portfolio, computer science, internship, student, Mightguy77, education, contact" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <h1 class="site-title">Mightguy77</h1>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="container">
+      <h2>About Me</h2>
+      <p>
+        Hello! I'm <strong>Mightguy77</strong>, a Computer Science student preparing for internships in software development.
+        I enjoy building web apps, learning new languages, and solving algorithmic problems. I'm motivated to contribute to real-world
+        projects and grow as part of a collaborative engineering team.
+      </p>
+    </section>
+
+    <section id="education" class="container">
+      <h2>Education</h2>
+      <table aria-describedby="education-desc">
+        <caption id="education-desc">Summary of academic qualifications</caption>
+        <thead>
+          <tr>
+            <th scope="col">Degree</th>
+            <th scope="col">Institution</th>
+            <th scope="col">Year</th>
+            <th scope="col">Grade / GPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.Sc. Computer Science</td>
+            <td>Example University</td>
+            <td>2024</td>
+            <td>3.8 / 4.0</td>
+          </tr>
+          <tr>
+            <td>High School Diploma</td>
+            <td>Example High School</td>
+            <td>2020</td>
+            <td>Graduated with honors</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch about internship opportunities, please use the form below.</p>
+
+      <form action="#" method="post" novalidate>
+        <div class="form-row">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" />
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com" />
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Tell me about the opportunity or how I can help."></textarea>
+        </div>
+
+        <div class="form-row">
+          <button type="submit">Send Message</button>
+        </div>
+        <p class="form-note">Note: This demo form posts to "#" — configure a backend or form service to process submissions.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Mightguy77. Built with semantic HTML5.</p>
+      <p class="small">Find me on GitHub: <a href="https://github.com/Mightguy77" target="_blank" rel="noopener">github.com/Mightguy77</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
