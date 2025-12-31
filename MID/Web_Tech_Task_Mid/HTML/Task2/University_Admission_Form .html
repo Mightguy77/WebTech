@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>University Admission Form</title>
+
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Online Admission Form</h2>
+
+    <form action="" method="post">
+
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+
+            <label for="fullName">Enter Your Full Name:</label>
+            <br>
+            <input type="text" id="fullName" name="fullName" required>
+            <br>
+
+            <label for="fatherName">Enter Your Father's Name:</label>
+            <br>
+            <input type="text" id="fatherName" name="fatherName"required>
+            <br>
+
+            <label for="email">Enter Your Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label>Gender:</label>
+            <br>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="other" name="gender" value="Other"> Other
+            <br>
+
+            <label for="dob">Date of Birth:</label>
+            <br>
+            <input type="date" id="dob" name="dob" required>
+            <br>
+
+            <label>Interests:</label>
+            <br>
+            <input type="checkbox" name="interest" value="Sports"> Sports
+            <input type="checkbox" name="interest" value="Music"> Music
+            <input type="checkbox" name="interest" value="Reading"> Reading
+            <br><br>
+
+        </fieldset>
+        <br>
+
+
+        <fieldset>
+            <legend><b>Academic Information</b></legend>
+
+            <label for="ssc">SSC Result (GPA):</label>
+            <br>
+            <input type="text" id="ssc" name="ssc" required>
+            <br>
+
+            <label for="hsc">HSC Result (GPA):</label>
+            <br>
+            <input type="text" id="hsc" name="hsc" required>
+            <br>
+
+            <label for="department">Preferred Department:</label>
+            <br>
+            <select id="department" name="department" required>
+
+                <option value="SD">Select Department</option>
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="BBA">BBA</option>
+                <option value="English">English</option>
+                <option value="LLB">LLB</option>
+
+            </select>
+            <br>
+
+            <label for="documents">Upload Documents:</label><br>
+            <input type="file" id="documents" name="documents" required>
+            <br>
+
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>

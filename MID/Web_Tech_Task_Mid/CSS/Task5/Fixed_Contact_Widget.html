@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Floating Contact Widget</title>
+
+    <style>
+        .contact-widget {
+
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: whitesmoke;
+            padding: 15px;
+            border: 2px solid grey;
+            border-radius: 8px;
+            width: 200px;
+            z-index: 100;
+           
+        }
+        
+
+        
+        .contact-widget:hover {
+
+            background-color: gray;
+        }
+
+
+
+        .contact-widget a {
+            
+            text-decoration: none;
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p style="height:2000px;">
+        Scroll this long page to see the floating widget stays in place.
+    </p>
+
+    <div class="contact-widget">
+        <strong>Contact Us:</strong><br>
+        <br>
+        Phone: 01234-567890 
+        <br>
+        Email: <a href="mailto:support@example.com">support@example.com</a>
+    </div>
+
+</body>
+</html>

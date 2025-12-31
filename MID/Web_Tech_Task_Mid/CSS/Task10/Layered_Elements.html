@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Overlapping Boxes z-index Demo</title>
+
+    <style>
+
+        .box1 {
+
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            color: white;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+            padding: 10px;
+        }
+
+
+        .box2 {
+
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            color: white;
+            position: absolute;
+            top: 80px;
+            left: 100px;
+            z-index: 2;
+            padding: 10px;
+        }
+
+
+        .box3 {
+
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            color: white;
+            position: absolute;
+            top: 110px;
+            left: 150px;
+            z-index: 3;
+            padding: 10px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <h2>Overlapping Boxes using z-index</h2>
+
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+
+</body>
+</html>
